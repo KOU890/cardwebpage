@@ -118,5 +118,10 @@
       width: 100%;
     }
   }
+  .resizeimage_100 {
+    max-width: 500px;
+  }
 
-  .resizeimage_100 img {width: 100%;}
+  .resizeimage_100 img {
+    width: 100%;
+  }
