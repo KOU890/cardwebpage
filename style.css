@@ -125,3 +125,8 @@
   .resizeimage_100 img {
     width: 100%;
   }
+
+  .cardpage img{
+    max-width: 100%;
+    height: auto;
+  }
