@@ -6,6 +6,7 @@
   body {
     font-family: "游ゴシック Medium",Arial, Helvetica, sans-serif;
     margin: 0;
+    font-size: 110%;
   }
   
   /* Header/logo Title */
@@ -181,3 +182,8 @@
   margin: auto;
 }
 
+.number {
+  padding: auto;
+  border: #4FB647;
+  border-style: ridge;
+}
