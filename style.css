@@ -70,7 +70,6 @@
     background-color: #f1f1f1;
     padding: 20px;
     background-image: url(images/side.jpg);
-    text-align: center;
   }
   
   /* Main column */
@@ -188,4 +187,85 @@
   padding: auto;
   border: #4FB647;
   border-style: ridge;
+}
+
+.original-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+  border-radius: 15px;
+  width: 400px;
+  height: 100px;
+  font-weight: bold;
+  border: 5px solid #d64d17;
+  position: relative;
+  transition: 0.3s;
+  background-color: #ff0000;
+  margin: auto;
+}
+
+.original-button::before, .original-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform-origin: 100% 50%;
+  height: 1px;
+  width: 11px;
+  background-color: #333;
+  border-radius: 2px;
+  will-change: transform;
+  transition: .3s;
+}
+
+.original-button::before {
+  transform: translateY(-50%) rotate(30deg);
+}
+
+.original-button::after {
+  transform: translateY(-50%) rotate(-30deg);
+}
+
+.original-button:hover::before {
+  transform: translate(5px, -50%) rotate(30deg);
+}
+
+.original-button:hover::after {
+  transform: translate(5px, -50%) rotate(-30deg);
+}
+
+.coution{
+  font-size: 14px;
+  font: bold;
+}
+
+/* ここから優待ボタン */
+.kashiwa-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+  border-radius: 0px;
+  width: 300px;
+  height: 60px;
+  font-weight: bold;
+  border: 2px solid #333333;
+  transition: 0.3s;
+  box-shadow: 5px 5px 0px 0px rgba(51, 51, 51, 1);
+  background-color: #ffffff;
+  margin: auto;
+}
+
+.kashiwa-button:hover {
+  box-shadow: 0 0 #333;
+  color: #fff;
+  background-color: #333;
 }
