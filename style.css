@@ -12,6 +12,7 @@ body {
   padding: 80px;
   text-align: center;
   background-image: url(images/header.jpg);
+  background-size: cover;
   color: white;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000,
     1px -1px 0 #000, 0px 1px 0 #000, 0 -1px 0 #000, -1px 0 0 #000, 1px 0 0 #000;
@@ -54,23 +55,26 @@ body {
 .side {
   -ms-flex: 30%; /* IE10 */
   flex: 30%;
-  background-color: #f1f1f1;
+  background-color: #dadada;
   padding: 20px;
-  background-image: url(images/side.jpg);
 }
 
 .main {
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
-  background-color: white;
-  padding: 20px;
-  background-image: url(images/body.jpg);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(images/header.jpg);
+  background-size: cover;
+  width: 100%;
 }
 
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+.info {
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 50px;
 }
 
 .footer {
@@ -85,6 +89,18 @@ body {
 
 .under {
   text-decoration: underline;
+}
+
+.headline {
+  font-size: 30px;
+  color: #065b4c;
+  width: 500px;
+  background-color: white;
+  padding: 10px;
+}
+
+.Text {
+  font-size: 20px;
 }
 
 @media screen and (max-width: 700px) {
@@ -106,7 +122,7 @@ body {
 }
 
 .resizeimage_80 {
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
 }
 
@@ -118,42 +134,69 @@ body {
   width: 100%;
 }
 
+.top_img {
+  max-width: 400px;
+  margin: auto;
+}
+
+.top_img img {
+  width: 100%;
+  border-radius: 100%;
+}
+
 .cardpage img {
   max-width: 100%;
   height: auto;
 }
 
-/* ボタンのCSS */
-.btn {
-  width: 350px;
-  height: 100px;
-  line-height: 100px;
-  margin: auto;
+.flex-container {
+  display: flex;
+  margin-bottom: 50px;
 }
-.btn a {
-  display: block;
+
+.flex-item {
+  flex-basis: 100%;
+}
+
+.image-wrap {
+  position: relative;
+  overflow: hidden;
+  padding-top: 60%;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.image-wrap img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  text-decoration: none;
-  background: #2ea129;
-  text-align: center;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  box-shadow: 0px 0px 0px 4px #8cd460;
-  transition: all 0.5s ease;
 }
-.btn a:hover {
-  background: #4fb647;
-  color: #999999;
-  margin-left: 0px;
-  margin-top: 0px;
-  border: 1px solid #ffffff;
-  box-shadow: 0px 0px 0px 4px #8cd460;
+
+.button-warp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 0px;
+  width: 300px;
+  height: 70px;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: #065b4c;
+  margin: auto;
+  position: relative;
+}
+
+.button-warp:hover {
+  opacity: 0.7;
 }
 
 .info_pdf {
@@ -168,62 +211,6 @@ body {
   border-style: ridge;
 }
 
-.original-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 25px;
-  border-radius: 15px;
-  width: 400px;
-  height: 100px;
-  font-weight: bold;
-  border: 5px solid #d64d17;
-  position: relative;
-  transition: 0.3s;
-  background-color: #ff0000;
-  margin: auto;
-}
-
-.original-button::before,
-.original-button::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform-origin: 100% 50%;
-  height: 1px;
-  width: 11px;
-  background-color: #333;
-  border-radius: 2px;
-  will-change: transform;
-  transition: 0.3s;
-}
-
-.original-button::before {
-  transform: translateY(-50%) rotate(30deg);
-}
-
-.original-button::after {
-  transform: translateY(-50%) rotate(-30deg);
-}
-
-.original-button:hover::before {
-  transform: translate(5px, -50%) rotate(30deg);
-}
-
-.original-button:hover::after {
-  transform: translate(5px, -50%) rotate(-30deg);
-}
-
-.coution {
-  font-size: 14px;
-  font: bold;
-}
-
 /* ここから優待ボタン */
 .kashiwa-button {
   display: flex;
@@ -234,7 +221,7 @@ body {
   color: #333333;
   font-size: 18px;
   border-radius: 0px;
-  width: 300px;
+  width: 500px;
   height: 60px;
   font-weight: bold;
   border: 2px solid #333333;
@@ -247,7 +234,7 @@ body {
 .kashiwa-button:hover {
   box-shadow: 0 0 #333;
   color: #fff;
-  background-color: #333;
+  background-color: #1da028;
 }
 
 .banner img {
