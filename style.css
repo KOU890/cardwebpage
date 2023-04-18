@@ -1,3 +1,9 @@
+@media screen and (max-width: 480px){
+  *{
+    flex-direction: column;/*flexアイテムを縦並びに変更*/
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -47,7 +53,6 @@ body {
 
 .row {
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
 }
 
@@ -57,8 +62,23 @@ body {
   max-width: 100%;
 }
 
+.row .main{
+  max-width: 100%;
+}
+
+.info .headline{
+  max-width: 100%;
+}
+
+.coution .headline{
+  max-width: 100%;
+}
+
+.main .flex-container {
+  max-width: 100%;
+}
+
 .main {
-  flex: 70%;
   
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.6),
@@ -66,15 +86,14 @@ body {
     ),
     url(images/header.jpg);
   background-size: cover;
-  max-width:max-content
 }
 
 .info {
   padding-right: 50px;
   padding-left: 50px;
   padding-top: 50px;
+  max-width: 100%;
 }
-
 
 .over {
   text-decoration: red wavy underline;
@@ -180,7 +199,7 @@ body {
   color: #ffffff;
   font-size: 18px;
   border-radius: 0px;
-  width: 180px;
+  width: 250px;
   height: 70px;
   font-weight: bold;
   transition: 0.3s;
@@ -239,4 +258,8 @@ body {
   max-width: 600px;
   margin: auto;
   margin-top: 15px;
+}
+
+.coution .kashiwa-button {
+  max-width: 100%;
 }
