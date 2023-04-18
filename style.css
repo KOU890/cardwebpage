@@ -46,42 +46,35 @@ body {
 }
 
 .row {
-  display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
 }
 
 .side {
-  /* -ms-flex: 30%; */
-  flex: 30%;
   background-color: #dadada;
   padding: 20px;
+  max-width: 100%;
 }
 
 .main {
-  /* -ms-flex: 70%;  */
   flex: 70%;
+  
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.6),
       rgba(255, 255, 255, 0.6)
     ),
     url(images/header.jpg);
   background-size: cover;
-  width: 100%;
+  max-width:max-content
 }
 
 .info {
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 50px;
+  padding-left: 50px;
   padding-top: 50px;
 }
 
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
 
 .over {
   text-decoration: red wavy underline;
