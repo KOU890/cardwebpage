@@ -1,6 +1,6 @@
-@media screen and (max-width: 767px){
-  *{
-    flex-direction: column;/*flexアイテムを縦並びに変更*/
+@media screen and (max-width: 767px) {
+  * {
+    flex-direction: column; /*flexアイテムを縦並びに変更*/
   }
 }
 
@@ -52,25 +52,27 @@ body {
 }
 
 .row {
-  display: flex;
   flex-wrap: wrap;
+}
+
+.row .side {
+  max-width: 100%;
 }
 
 .side {
   background-color: #dadada;
   padding: 20px;
+}
+
+.row .main {
   max-width: 100%;
 }
 
-.row .main{
+.info .headline {
   max-width: 100%;
 }
 
-.info .headline{
-  max-width: 100%;
-}
-
-.coution .headline{
+.coution .headline {
   max-width: 100%;
 }
 
@@ -79,7 +81,6 @@ body {
 }
 
 .main {
-  
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.6),
       rgba(255, 255, 255, 0.6)
@@ -264,6 +265,6 @@ body {
   max-width: 100%;
 }
 
-.brank{
+.brank {
   margin-bottom: 50px;
 }
